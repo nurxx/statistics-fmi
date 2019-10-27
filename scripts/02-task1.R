@@ -17,20 +17,20 @@ print(median_built_up)
 median_non_built_up <- median_func(motorcycleAccidentsDF$Non_built_up)
 print(median_non_built_up)
 
-# b. // TODO
+# b. //TODO 
 
 mean_func <- function(x) {
   sum(x)/length(x)
 }
 
 median_func <- function(x) {
-  sorted <- sort(x)
+  x_sorted <- sort(x)
   n <- length(x_sorted)
   
   if(n %% 2 == 0) {
-    return(mean(sorted[n/2 + c(0, 1)]))
+    return(mean(x_sorted[n/2 + c(0, 1)]))
   } else {
-    return(sorted[round(n/2 + 0.25)])
+    return(x_sorted[round(n/2 + 0.25)])
   }
 }
 
